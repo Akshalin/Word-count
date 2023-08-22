@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wordcount</title>
+    <style>
+        body{
+            background-image: url(D:\HTMLStudy/count.jpg);
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+        }
+        div{
+            margin-left: 400px;
+            margin-top:10px;
+        }
+        #show{
+            padding: 10px;
+            border-radius: 10%;
+            margin-top: 20px;
+            margin-left:200px;
+            background-color:greenyellow;
+            font-size: 20px;
+            box-shadow: 2px 2px;
+        }
+        #a{
+            margin-top: 20px;
+            font-size: 20px;
+            color: red;
+        }
+        h1{
+            color:darkorchid;
+        }
+    </style>
+</head>
+<body>
+    <script>
+         function wordcount() {
+            let text = document.getElementById("a").value;
+            let numWords = 0;
+            for (var i = 0; i < text.length; i++) {
+                var currentCharacter = text[i];
+                if (currentCharacter == " ") {
+                    numWords += 1;
+                }
+            }
+            numWords += 1;
+            document.getElementById("show").innerHTML = numWords;
+            }
+    </script>
+    <div>
+        <h1>Calculate number of words in text box</h1>
+        <textarea name="words" id="a" cols="60" rows="5">Enter words here</textarea><br>
+        <button onclick="wordcount()" id="show">Wordcount</button>
+    </div>
+</body>
+</html>
